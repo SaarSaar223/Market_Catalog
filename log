@@ -1,0 +1,61 @@
+Script started on 2022-11-09 18:27:16+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="107" LINES="53"]
+[?2004h]0;braiman@instance-1: ~/Project2_CB_red[01;32mbraiman@instance-1[00m:[01;34m~/Project2_CB_red[00m$ git status
+[?2004lOn branch AlgorithmEngineer
+Your branch is ahead of 'origin/AlgorithmEngineer' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mlog[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;braiman@instance-1: ~/Project2_CB_red[01;32mbraiman@instance-1[00m:[01;34m~/Project2_CB_red[00m$ git log -1
+[?2004l[?1h=[33mcommit 9b34effaad3eb813caf7ec138c15ed74ff446e53[m[33m ([m[1;36mHEAD -> [m[1;32mAlgorithmEngineer[m[33m)[m[m
+Author: Ben Braiman <braiman@wisc.edu>[m
+Date:   Wed Nov 9 18:25:57 2022 +0000[m
+[m
+    Added Makefile and junit5[m
+[K[?1l>[?2004h]0;braiman@instance-1: ~/Project2_CB_red[01;32mbraiman@instance-1[00m:[01;34m~/Project2_CB_red[00m$ make clean
+[?2004lrm *.class
+rm: cannot remove '*.class': No such file or directory
+make: *** [Makefile:2: clean] Error 1
+[?2004h]0;braiman@instance-1: ~/Project2_CB_red[01;32mbraiman@instance-1[00m:[01;34m~/Project2_CB_red[00m$ ls
+[?2004lAlgorithmEngineerTests.java  IRBTree.java  PLUValidator.java  SortedCollectionInterface.java  log
+IPLUValidator.java           Makefile      RedBlackTree.java  [0m[01;31mjunit5.jar[0m
+[?2004h]0;braiman@instance-1: ~/Project2_CB_red[01;32mbraiman@instance-1[00m:[01;34m~/Project2_CB_red[00m$ make runTests
+[?2004ljavac -cp .:junit5.jar AlgorithmEngineerTests.java
+java -jar junit5.jar --class-path=. --include-classname=.* --select-class=AlgorithmEngineerTests
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+[36m╷[0m
+[36m├─[0m [36mJUnit Jupiter[0m [32m✔[0m
+[36m│  └─[0m [36mAlgorithmEngineerTests[0m [32m✔[0m
+[36m│     ├─[0m [34mtestRemoveBlack()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestRedUncle()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestPLUValidator()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestMyTree()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestIterator()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestBlackUncle()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestRemoveRed()[0m [32m✔[0m
+[36m│     └─[0m [34mfromScratch()[0m [32m✔[0m
+[36m└─[0m [36mJUnit Vintage[0m [32m✔[0m
+
+Test run finished after 181 ms
+[         3 containers found      ]
+[         0 containers skipped    ]
+[         3 containers started    ]
+[         0 containers aborted    ]
+[         3 containers successful ]
+[         0 containers failed     ]
+[         8 tests found           ]
+[         0 tests skipped         ]
+[         8 tests started         ]
+[         0 tests aborted         ]
+[         8 tests successful      ]
+[         0 tests failed          ]
+
+[?2004h]0;braiman@instance-1: ~/Project2_CB_red[01;32mbraiman@instance-1[00m:[01;34m~/Project2_CB_red[00m$ exit
+[?2004lexit
+
+Script done on 2022-11-09 18:27:44+00:00 [COMMAND_EXIT_CODE="0"]
